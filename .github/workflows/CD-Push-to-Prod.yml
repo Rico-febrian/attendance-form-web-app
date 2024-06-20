@@ -17,7 +17,7 @@ jobs:
         uses: appleboy/ssh-action@v1.0.3
         env:
           APP_PATH_PROD: ${{ vars.APP_PATH_PROD }}
-          GIT_URL: ${{ vars.GIT_URL }}
+          GIT_URL: ${{ secrets.GIT_URL }}
           POSTGRES_USER: ${{ secrets.DB_USER_PROD }}
           POSTGRES_PASSWORD: ${{ secrets.DB_PASSWORD_PROD }}
           POSTGRES_DB: ${{ vars.DB_DBNAME_PROD }}
