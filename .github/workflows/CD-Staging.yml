@@ -29,6 +29,7 @@ jobs:
           script: |
 
             if [[ -d "${APP_PATH_STAGING}" ]]; then 
+              set -x
               cd $APP_PATH_STAGING
               sudo docker compose down
               git pull origin main
